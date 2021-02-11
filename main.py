@@ -19,3 +19,19 @@ for letter in roman_string:
 
 final_transfer += second_number
 print("Arabské číslo je : {0}".format(final_transfer))
+
+# cislo = "MCCXXXIV"
+# arabska = {'I' : 1, 'V' : 5, 'X' :10, 'L' : 50, 'C' : 100, 'D' : 500, 'M' :1000}
+#
+# predchozi = 0
+# celkem = 0
+#
+# for char in cislo:
+#     if arabska[char] > predchozi:
+#        celkem -= predchozi
+#     else:
+#         celkem += predchozi
+#     predchozi = arabska[char]
+# celkem += predchozi
+#
+# print("Převedené číslo je: ",celkem)

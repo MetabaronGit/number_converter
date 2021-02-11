@@ -1,19 +1,23 @@
 # převodnik římských čísel na arabská čísla
-romanNumbers = ("I", "V", "X", "L", "C", "D", "M")
-arabicNumbers = (1, 5, 10, 50, 100, 500, 1000)
 
+roman_numbers = ("I", "V", "X", "L", "C", "D", "M")
+arabic_numbers = (1, 5, 10, 50, 100, 500, 1000)
 
-romanString = str(input("Zadej římské číslo: ")).upper()
+roman_string = str(input("Zadej římské číslo: ")).upper()
 
 firstNumber = secondNumber = 0
 finalTransfer = 0
-# cyklus A = 0 - len(romanString)-1
-transferIndex = romanNumbers.index(romanString[A])
-firstNumber = secondNumber
-secondNumber = arabicNumbers[transferIndex]
-if 0 < firstNumber < secondNumber:
-    finalTransfer += firstNumber * (-1)
-else:
-    finalTransfer += firstNumber
 
+for letter in roman_string:
+    print(letter)
+    transferIndex = roman_numbers.index(letter)
+    firstNumber = secondNumber
+    secondNumber = arabic_numbers[transferIndex]
+
+    if (0 < firstNumber) and (firstNumber < secondNumber):
+        finalTransfer += firstNumber * (-1)
+    else:
+        finalTransfer += firstNumber
+
+finalTransfer += secondNumber
 print("Arabské číslo je : {0}".format(finalTransfer))
